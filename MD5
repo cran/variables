@@ -1,9 +1,9 @@
-e42b840853e68a8f628e334ffe36fc0a *DESCRIPTION
+cdbddd5adc6872a7b6ae077eae36dca0 *DESCRIPTION
 880a4f922ec12ad21a3375316f74360a *NAMESPACE
-dc9e367faab985b9d5d45d9936761a45 *R/variables.R
+c9317ea32ebe6dfc7a89521df95c923d *R/variables.R
 1c9695dee7162d6e72883b552906e753 *cleanup
 714027d9d3ec8f7aad2d3867905c84cc *inst/CITATION
-dd2d9af4b6fc2e6d3672e77f6c776302 *inst/NEWS.Rd
+914ffb309f2ceec854ed320293a7ff9e *inst/NEWS.Rd
 ab90cdea1c6aa49332e88415788e65d8 *man/access.Rd
 136c67099e3bb0709ea3fd7f5419dcbb *man/check.Rd
 0e4d133e91ea934c8db3f212e0e19bdf *man/factor_var.Rd

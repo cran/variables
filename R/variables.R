@@ -31,7 +31,9 @@ numeric_var <- function(name, desc = NULL, unit = NULL,
     ret$support <- support
     discrete <- is.integer(support) || (length(support) > 2L)
     if (discrete) {
+        ### <FIXME> why???
         stopifnot(is.null(bounds))
+        ### </FIXME>
         class(ret) <- c("discrete_var", "numeric_var", class(ret))
         return(ret)
     }
@@ -205,6 +207,9 @@ check.ordered_var <- function(object, data) {
         v <- variable.names(object)
         stopifnot(v %in% names(data))
         data <- data[[v]]
+        ### data might be censored
+        if (inherits(data, "response"))
+            data <- data$cleft
     }
     is.ordered(data) && isTRUE(all.equal(levels(data), 
                                          levels(object)))
@@ -215,6 +220,9 @@ check.factor_var <- function(object, data) {
         v <- variable.names(object)
         stopifnot(v %in% names(data))
         data <- data[[v]]
+        ### data might be censored
+        if (inherits(data, "response"))
+            data <- data$cleft
     }
     is.factor(data) && isTRUE(all.equal(levels(data), 
                                         levels(object)))
